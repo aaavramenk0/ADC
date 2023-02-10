@@ -1,7 +1,7 @@
-import logo from '../images/logo.svg';
-import fbIcon from '../images/fbIcon.svg';
-import instIcon from '../images/inst-icon.svg'
-import linkedinIcon from '../images/linkedin-icon.svg'
+import logo from '../images/NavBar/logo.svg';
+import fbIcon from '../images/NavBar/fbIcon.svg';
+import instIcon from '../images/NavBar/inst-icon.svg'
+import linkedinIcon from '../images/NavBar/linkedin-icon.svg'
 import { Link } from 'react-router-dom';
 import './NavBar.css'
 

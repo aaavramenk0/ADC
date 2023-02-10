@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Commissioner', sans-serif;
+}
+
+.header {
+    padding: 100px 0 100px 200px;
+    background-image: url('../images/HomePage/bg.jpg');
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.company-name {
+    font-weight: 600;
+    color: white;
+    font-size: 72px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.company-slogan {
+    color: white;
+    font-weight: 500;
+    font-size: 32px;
+}

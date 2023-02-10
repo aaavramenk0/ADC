@@ -3,15 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 ul *{
     list-style: none;
-    color: #080D16;
     text-decoration: none;
+    color: #080D16;
     font-family: 'Commissioner', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 400;
 }
+
 .navbar__container, .links, .social-media, .languages {
     display: flex;
 }
@@ -22,7 +24,7 @@ ul *{
     justify-content: space-between;
 }
 .links {
-    gap: 30px;
+    gap: 40px;
 }
 .social-media {
     gap: 10px;
