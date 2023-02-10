@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul *{
+    list-style: none;
+    color: #080D16;
+    text-decoration: none;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.navbar__container, .links, .social-media, .languages {
+    display: flex;
+}
+.navbar__container {
+    text-align: center;
+    padding: 16px 96px;
+    align-items: center;
+    justify-content: space-between;
+}
+.links {
+    gap: 30px;
+}
+.social-media {
+    gap: 10px;
+}
+.languages {
+    gap: 5px;
+}
