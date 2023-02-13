@@ -1,0 +1,28 @@
+.services{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 96px 100px;
+    gap: 24px;
+}
+.service {  
+    width: 300px;
+    background: #CED9ED;
+    border-radius: 4px;
+    padding: 24px 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    flex-direction: column;
+}
+.service__heading{
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.service img {
+    width: 62px;
+    height: 60px;
+}

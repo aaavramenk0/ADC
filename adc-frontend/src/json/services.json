@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Web design",
+        "icon": "../images/HomePage/services/web-design-icon.svg",
+        "description": "Creating visually appealing and user-friendly websites"
+    },
+    {
+        "name": "Web development",
+        "icon": "../images/HomePage/services/web-dev-icon.svg",
+        "description": "Creating visually appealing and user-friendly websites"
+    },
+    {
+        "name": "Web adaptation",
+        "icon": "../images/HomePage/services/web-adaptation-icon.svg",
+        "description": "The process of making a website accessible and usable on different devices and platforms"
+    },
+    {
+        "name": "SEO optimization",
+        "icon": "../images/HomePage/services/seo-icon.svg",
+        "description": "Improving a websites visibility and ranking in search engines like Google, Bing and others"
+    }
+]

@@ -17,19 +17,16 @@ const NavBar = () => {
             
             <ul className='links'>
                 <li>
-                    <Link to="/">Home</Link>
+                    Process
                 </li>
                 <li>
-                    <Link to="/process">Process</Link>
+                    About us
                 </li>
                 <li>
-                    <Link to="/about-us">About us</Link>
+                    Projects
                 </li>
                 <li>
-                    <Link to="/projects">Projects</Link>
-                </li>
-                <li>
-                    <Link to="/contact">Contact us</Link>
+                    Contact us
                 </li>    
             </ul> 
             <ul className='social-media'>
