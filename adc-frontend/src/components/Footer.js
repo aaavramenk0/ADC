@@ -41,12 +41,12 @@ const Footer = () => {
                 </ul>    
             </div>
             <div className='contacts'>
-                {/* <input type="tel">+1 706 802 23 73</input>
-                <input type="email">info@adc-web.com</input> */}
+                <h3>Contacts</h3>
+                <a href="tel:+17068022373">+1 706 802 2373</a> <br/>
+                <a href="mailto:info@adc-web.com"> info@adc-web.com</a>
             </div>
             
         </footer>
     )
 }
-
 export default Footer;

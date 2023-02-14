@@ -1,0 +1,26 @@
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+.social-media__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contacts a {
+    text-decoration: none;
+    color: black;
+}
