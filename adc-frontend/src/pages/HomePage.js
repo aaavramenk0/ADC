@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import AboutUs from '../components/AboutUs';
 import Services from '../components/Services';
 import HowWeDoIt from '../components/HowWeDoIt';
-import Footer from '../components/Footer';
+
 
 const HomePage = () => {
     return (
@@ -14,7 +14,6 @@ const HomePage = () => {
                 <Services /> 
                 <HowWeDoIt />            
             </main>
-            <Footer />
         </>
     )
 }

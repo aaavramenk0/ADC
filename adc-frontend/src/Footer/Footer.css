@@ -2,18 +2,26 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 25px;
 }
-.links {
+.footer-links {
     display: flex;
-    flex-direction: column;
-    align-items: center; 
+    flex-direction: column; 
     justify-content: center;
+    gap: 24px;
+}
+.footer-links li{
+    font-family: 'Commisioner', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #021100;
 }
 .social-media__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    margin-top: 16px;
 }
 .contacts {
     display: flex;
@@ -23,4 +31,7 @@ footer{
 .contacts a {
     text-decoration: none;
     color: black;
+}
+.contacts-heading {
+    margin-bottom: 16px;
 }
