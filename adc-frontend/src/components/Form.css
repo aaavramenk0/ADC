@@ -1,0 +1,23 @@
+.form__section {
+    background-color: #E1E9F8;
+    text-align: center;
+    padding: 75px 96px;
+    font-family: 'Commissioner', sans-serif;
+}
+.form__heading {
+    font-weight: 600;
+    font-size: 40px;
+    color: #080D16;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+.form__subheading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #080D16;
+    margin-bottom: 50px;
+}
+.form__subheading span {
+    color: #4267b2;
+    text-transform: uppercase;
+}

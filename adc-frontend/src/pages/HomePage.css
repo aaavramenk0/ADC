@@ -6,3 +6,14 @@
     box-sizing: border-box;
     font-family: 'Commissioner', sans-serif;
 }
+::-webkit-scrollbar {
+    width: 12px;
+    background: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background: #4267b2;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5c80c7;
+}

@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import AboutUs from '../components/AboutUs';
 import Services from '../components/Services';
 import HowWeDoIt from '../components/HowWeDoIt';
+import Form from '../components/Form';
 
 
 const HomePage = () => {
@@ -12,7 +13,9 @@ const HomePage = () => {
             <main>
                 <AboutUs />   
                 <Services /> 
-                <HowWeDoIt />            
+                <HowWeDoIt />  
+                <Form />
+                <Form />
             </main>
         </>
     )
