@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Commissioner', sans-serif;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
     width: 12px;

@@ -2,7 +2,7 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 25px;
+    padding: 25px 0;
 }
 .footer-links {
     display: flex;

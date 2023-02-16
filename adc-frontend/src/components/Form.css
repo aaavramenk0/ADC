@@ -21,3 +21,65 @@
     color: #4267b2;
     text-transform: uppercase;
 }
+
+.form__cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: first baseline;
+    margin-bottom: 60px;
+}
+.form__card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: #FEFEFE;
+    box-shadow: 0px 4px 15px rgba(178, 179, 210, 0.7);
+    border-radius: 8px;
+    font-family: 'Commissioner';
+    font-weight: 500;
+    font-size: 18px;
+    padding: 24px;
+    width: 400px;
+    height: 356px;
+}
+.form__input {
+    padding: 10px;
+    border: 2px solid #4267b2;
+    border-radius: 4px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+.checkboxes__label {
+    margin-bottom: 8px;
+}
+.form__checkboxes {
+    display: flex;
+}
+.form__checkbox label {
+    margin: 0 30px 0 5px;
+}
+.deadline {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.deadline input {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.form-btn {
+    background: #898F9C;
+    border-radius: 4px;
+    font-family: 'Commissioner';
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 100px;
+    color: #F5F5F5;
+}
+.form-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+}
