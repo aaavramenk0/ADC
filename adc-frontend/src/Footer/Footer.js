@@ -9,9 +9,9 @@ import './Footer.css'
 const Footer = () => {
     return (
         <footer className='footer'>
-            <div className="logo"> 
+            <div > 
                 <Link to="/">
-                    <img src={ logo } alt="Logo of ADC" />
+                    <img src={ logo } alt="Logo of ADC" className="footer-logo" />
                 </Link>    
             </div>
             

@@ -1,69 +1,10 @@
-/* import logo from '../images/NavBar/logo.svg';
-import fbIcon from '../images/NavBar/fbIcon.svg';
-import instIcon from '../images/NavBar/inst-icon.svg'
-import linkedinIcon from '../images/NavBar/linkedin-icon.svg'
-import { Link } from 'react-router-dom';
-import './NavBar.css'
-
-const NavBar = () => {
-    return (
-        <div className='navbar__container'>
-            <div className="logo"> 
-                <Link to="/">
-                    <img src={ logo } alt="Logo of ADC" />
-                </Link>    
-            </div>
-            
-            
-            <ul className='links'>
-                <li>
-                    Process
-                </li>
-                <li>
-                    About us
-                </li>
-                <li>
-                    Projects
-                </li>
-                <li>
-                    Contact us
-                </li>    
-            </ul> 
-            <ul className='social-media'>
-                <li>
-                    <Link to='/'><img src={fbIcon} alt="" /></Link>
-                </li>
-                <li> 
-                    <Link to="https://www.instagram.com/_aaavramenko_/" target="_blank"><img src={instIcon} alt="" /></Link>
-                </li>
-                <li>
-                    <Link to='/'><img src={linkedinIcon} alt="" /></Link>
-                </li>
-            </ul>
-            <ul className='languages'>
-                <li>
-                    <Link to="/">UA</Link> 
-                </li>
-                <li>
-                    |
-                </li>
-                <li>
-                    <Link to="/">EN</Link>
-                </li>
-            </ul>
-        </div>
-    )
-} 
-
-export default NavBar;
-*/
-
 import { useState, useRef, useEffect } from 'react';
 import { links, social } from './data';
 import { Link } from 'react-router-dom'
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/NavBar/logo.svg';
-import styles from './NavBar.module.css'
+import styles from './NavBar.module.css';
+import {motion} from 'framer-motion'
 
 const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false); // state for show/hide links depends on screen width
@@ -93,7 +34,8 @@ const Navbar = () => {
                 <div className={styles['nav-header']}>
                     <Link to='/'><img src={logo} className={styles.logo} alt='logo' /></Link>
                     <button className={styles['nav-toggle']} onClick={toggleLinks}>
-                        <FaBars/>
+                        {!showLinks && <FaBars /> /* if showLinks == false => we display hamburger icon*/}
+                        {showLinks && <FaTimes /> /* if showLinks == true => we display close icon*/}
                     </button>
                 </div>
                 <div className={styles['links-container']} ref={linksContainerRef}>

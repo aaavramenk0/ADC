@@ -35,3 +35,29 @@ footer{
 .contacts-heading {
     margin-bottom: 16px;
 }
+
+@media (max-width: 800px) {
+    .footer-links {
+        display: none;
+    }
+    .footer-logo {
+        width: 40vw;
+    }
+}
+@media (max-width: 500px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-logo {
+        margin-bottom: 25px;
+        width: 50vw;
+    }
+    .social-media__div {
+        margin-bottom: 30px;
+    }
+    .social-media__list {
+        gap: 10px;
+        margin-top: 8px;
+    }
+}
