@@ -1,0 +1,17 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ua-heading{
+    padding: 100px 0;
+    font-family: 'Commisioner', sans-serif;
+    font-size: 70px;
+    text-align: center;
+}
+.ua-btn {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
