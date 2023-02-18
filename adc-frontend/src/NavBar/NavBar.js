@@ -60,7 +60,7 @@ const Navbar = () => {
                         );
                     })}
                 </ul>
-                {/* Add dynamic styles depending on the website language*/}
+                {/* Add dynamic styles depending on the website language */}
                 <ul className={styles.languages }>
                     <Link to='/ua'><li style={{color: '#898F9C'}}>UA</li></Link> 
                     <li style={{color: '#898F9C'}}>|</li>
