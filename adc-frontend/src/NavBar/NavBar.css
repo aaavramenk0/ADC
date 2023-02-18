@@ -69,6 +69,13 @@ nav * {
 .languages {
   display: none;
 }
+.lang {
+  color: #898F9C;
+}
+.active-lang {
+  color: #4267b2;
+  font-weight: 600;
+}
 @media screen and (min-width: 1050px) {
   .nav-center {
     max-width: 1440px;

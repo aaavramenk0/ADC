@@ -3,22 +3,22 @@ import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 export const links = [
     {
         id: 1,
-        url: '/',
+        url: '#process',
         text: 'process',
     },
     {
         id: 2,
-        url: '/about',
+        url: '#about-us',
         text: 'about us',
     },
     {
         id: 3,
-        url: '/projects',
+        url: '#projects',
         text: 'projects',
     },
     {
         id: 4,
-        url: '/contacts',
+        url: '#contacts',
         text: 'contacts',
     },
 ];
@@ -26,17 +26,17 @@ export const links = [
 export const social = [
     {
         id: 1,
-        url: 'https://www.twitter.com',
+        url: 'https://www.facebook.com/profile.php?id=100012455267566',
         icon: <FaFacebook />,
     },
     {
         id: 2,
-        url: 'https://www.twitter.com',
+        url: 'https://www.instagram.com/_aaavramenko_/',
         icon: <FaInstagram />,
     },
     {
         id: 3,
-        url: 'https://www.twitter.com',
+        url: 'https://www.linkedin.com/in/oleksandr-avramenko/',
         icon: <FaLinkedin />,
     },
 ];

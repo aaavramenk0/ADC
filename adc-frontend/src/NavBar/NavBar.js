@@ -3,17 +3,21 @@ import { links, social } from '../json/data';
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/NavBar/logo.svg';
-import styles from './NavBar.module.css';
+import './NavBar.css';
 import {motion} from 'framer-motion'
 
 const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false); // state for show/hide links depends on screen width
     const linksContainerRef = useRef(null);
     const linksRef = useRef(null);
+    const [isUA, setIsUA] = useState(false);
     
     const toggleLinks = () => { // function for show/hide links using the state
         setShowLinks(!showLinks); // toggle the state of the links
     };
+    useEffect(() => {
+        console.log('');
+    }, [isUA])
 
     useEffect(() => { // hook which is used to tell React what should be done after render 
         // getBoundingClientRect() returns a DOMRect object providing information about the size of an element and its position relative to the viewport (https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
@@ -30,16 +34,16 @@ const Navbar = () => {
 
     return ( // what is component returns
         <nav>
-            <div className={styles['nav-center']}>
-                <div className={styles['nav-header']}>
-                    <Link to='/'><img src={logo} className={styles.logo} alt='logo' /></Link>
-                    <button className={styles['nav-toggle']} onClick={toggleLinks}>
+            <div className='nav-center'>
+                <div className='nav-header'>
+                    <Link to='/'><img src={logo} className='logo' alt='logo' /></Link>
+                    <button className='nav-toggle' onClick={toggleLinks}>
                         {!showLinks && <FaBars /> /* if showLinks == false => we display hamburger icon*/}
                         {showLinks && <FaTimes /> /* if showLinks == true => we display close icon*/}
                     </button>
                 </div>
-                <div className={styles['links-container']} ref={linksContainerRef}>
-                    <ul className={styles.links} ref={linksRef}>
+                <div className='links-container' ref={linksContainerRef}>
+                    <ul className='links' ref={linksRef}>
                     {links.map((link) => { // mapping through the list of links inside the data.js
                         const { id, url, text } = link; // id = link.id; url = link.url; text = link.text
                             return ( // what the function returns
@@ -50,21 +54,21 @@ const Navbar = () => {
                     })}
                     </ul>
                 </div>
-                <ul className={styles['social-icons']}>
+                <ul className='social-icons'>
                     {social.map((socialIcon) => { // mapping through the list of social inside the data.js
                         const { id, url, icon } = socialIcon; // id = socialIcon.id; url = socialIcon.url; icon = socialIcon.icon
                         return ( // what the function returns
                             <li key={id}>
-                                <a href={url}>{icon}</a>
+                                <a href={url} target='_blank' rel='noreferrer'>{icon}</a>
                             </li>
                         );
                     })}
                 </ul>
                 {/* Add dynamic styles depending on the website language */}
-                <ul className={styles.languages }>
-                    <Link to='/ua'><li style={{color: '#898F9C'}}>UA</li></Link> 
+                <ul className='languages'>
+                    <Link to='/ua' onClick={isUA => setIsUA(true)}><li className={`${isUA ? 'active-lang' : 'lang'}`}>UA</li></Link> 
                     <li style={{color: '#898F9C'}}>|</li>
-                    <Link to='/'><li style={{color: '#4267b2','fontWeight' : 600}}>EN</li></Link>
+                    <Link to='/' onClick={isUA => setIsUA(false)}><li className={`${!isUA ? 'active-lang' : 'lang'}`}>EN</li></Link>
                 </ul>
             </div>
         </nav>
