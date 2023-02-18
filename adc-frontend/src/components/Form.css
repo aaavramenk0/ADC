@@ -78,8 +78,9 @@
     font-size: 16px;
     padding: 16px 100px;
     color: #F5F5F5;
-}
-.form-btn {
     text-decoration: none;
     text-transform: uppercase;
+}
+.active {
+    background: #4267B2;
 }

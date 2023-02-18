@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { links, social } from './data';
+import { links, social } from '../json/data';
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/NavBar/logo.svg';

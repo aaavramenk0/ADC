@@ -1,8 +1,13 @@
+import './HowWeDoIt.css'
+
 const HowWeDoIt = () => {
     return(
-        <div>
-            
-        </div>
+        <>
+            <h2 className="process__heading">How we do it</h2>
+            <div className="process__phase">
+                
+            </div>
+        </>
     )
 }
 

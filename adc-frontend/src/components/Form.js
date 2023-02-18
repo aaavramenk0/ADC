@@ -1,6 +1,17 @@
 import './Form.css';
+import { useState } from 'react';
 
 const Form = () => {
+    const [isFieldFilled, setIsFieldFilled] = useState(false); // useState hook for checking the value in input
+
+    const toggleButton = (event) => { // function to get the event(input) from calling the function
+        if (event.target.value.trim().length > 0) { // then if value inside the input is more then 0 ('trim' is to get rid of spaces after the text and before)
+            setIsFieldFilled(true); // we set the value of 'isFieldFilled' to 'true'
+        } else { // or if the value inside the input is less or equal to 0
+            setIsFieldFilled(false); // we set the value of 'isFieldFilled' to 'false'
+        }
+    }
+
     return (
         <section className="form__section" id="apply">
             <h2 className="form__heading">Want a website for your bussiness?</h2>
@@ -52,11 +63,11 @@ const Form = () => {
                     </div>
                     
                     <label htmlFor="price">How much are you ready to pay for your website? (in USD) *</label>
-                    <input type="number" id="price" name="price" placeholder="1500" step="50" className="form__input" required/>
+                    <input type="number" id="price" name="price" placeholder="1500" step="50" className="form__input" required onChange={toggleButton /* on every change inside the input we check the inside value by calling the 'toggleButton' function and using useState hook*/}/>
                 </form>
             </div>
 
-            <a href="#apply" className="form-btn">Apply now</a>
+            <a href="#apply" className={`form-btn ${isFieldFilled ? 'active' : ''} ` /* and depending on the value of 'isFieldFilled we dynamically add or delete 'active' class name from the button */}>Apply now</a>
         </section>
     )
 }
