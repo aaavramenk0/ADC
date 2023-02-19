@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/NavBar/logo.svg';
 import './NavBar.css';
-import {motion} from 'framer-motion'
 
 const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false); // state for show/hide links depends on screen width
