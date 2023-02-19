@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { links, social } from '../json/data';
+import { links, social } from '../data/navbar';
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/NavBar/logo.svg';
@@ -15,9 +15,6 @@ const Navbar = () => {
     const toggleLinks = () => { // function for show/hide links using the state
         setShowLinks(!showLinks); // toggle the state of the links
     };
-    useEffect(() => {
-        console.log('');
-    }, [isUA])
 
     useEffect(() => { // hook which is used to tell React what should be done after render 
         // getBoundingClientRect() returns a DOMRect object providing information about the size of an element and its position relative to the viewport (https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
@@ -46,12 +43,11 @@ const Navbar = () => {
                     <ul className='links' ref={linksRef}>
                     {links.map((link) => { // mapping through the list of links inside the data.js
                         const { id, url, text } = link; // id = link.id; url = link.url; text = link.text
-                            return ( // what the function returns
-                            <li key={id}> 
-                                <a href={url}>{text}</a>
-                            </li>
-                        );
-                    })}
+                        return ( // what the function returns
+                        <li key={id}> 
+                            <a href={url}>{text}</a>
+                        </li>
+                    )})}
                     </ul>
                 </div>
                 <ul className='social-icons'>

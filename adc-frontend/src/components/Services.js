@@ -1,4 +1,4 @@
-import services from '../json/services.json'
+import services from '../data/services.json'
 import './Services.css'
 import webDesignIcon from '../images/HomePage/services/web-design-icon.svg'
 import webDevIcon from '../images/HomePage/services/web-dev-icon.svg'
