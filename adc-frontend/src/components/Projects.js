@@ -12,10 +12,10 @@ const Projects = () => {
                         <div key={id}>
                             <h3 className='project__heading'>{heading}</h3>
                             <div className='project-photos'>
-                                <img src={desktopUrl} alt="" />
-                                <img src={tabletUrl} alt="" />
-                                <img src={topPhoneUrl} alt="" />
-                                <img src={bottomPhoneUrl} alt="" />
+                                <img src={desktopUrl} alt={`${heading} desktop`} />
+                                <img src={tabletUrl} alt={`${heading} tablet`} />
+                                <img src={topPhoneUrl} alt={`${heading} phone 1`} />
+                                <img src={bottomPhoneUrl} alt={`${heading} phone 2`} />
                             </div>
                         </div>
                     )
