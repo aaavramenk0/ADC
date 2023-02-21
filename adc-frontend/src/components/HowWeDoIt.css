@@ -1,3 +1,6 @@
+.process {
+    padding: 10px 200px 50px;
+}
 .process__heading {
     text-align: center;
     font-family: 'Commissioner';
@@ -7,4 +10,62 @@
     text-transform: uppercase;
     padding-top: 100px;
     margin-bottom: 30px;
+}
+.process__phases {
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(2, 1fr);
+    gap: 16px 40px;
+}
+.phase__heading-line {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    
+}
+.phase__heading-line span {
+    font-family: 'Commissioner';
+    font-weight: 600;
+    font-size: 40px;
+    color: #005697;
+}
+.phase__heading-line h2 {
+    font-family: 'Commissioner';
+    font-weight: 600;
+    font-size: 24px;
+    color: #080D16;
+}
+.phase-description {
+    font-family: 'Commissioner';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-left: 30px;
+}
+.discovery-phase {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.design-phase {
+    grid-area: 2 / 2 / 3 / 3;
+}
+.left-phase-img {
+    position: absolute;
+    left: 100px;
+    z-index: -1;
+}
+.right-phase-img {
+    position: absolute;
+    left: calc(100vw - 25em);
+    z-index: -1;
+}
+.dev-phase {
+    grid-area: 3 / 1 / 4 / 2;
+}
+.testing-phase {
+    grid-area: 4 / 2 / 5 / 3;
+}
+.deployment-phase {
+    grid-area: 5 / 1 / 6 / 2;
+}
+.maintenance-phase {
+    grid-area: 6 / 2 / 7 / 3;
 }

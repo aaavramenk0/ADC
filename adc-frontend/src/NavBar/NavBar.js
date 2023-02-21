@@ -32,7 +32,7 @@ const Navbar = () => {
         <nav>
             <div className='nav-center'>
                 <div className='nav-header'>
-                    <Link to='/'><img src={logo} className='logo' alt='logo' /></Link>
+                    <a href="#top"><img src={logo} className='logo' alt='logo' /></a>
                     <button className='nav-toggle' onClick={toggleLinks}>
                         {!showLinks && <FaBars /> /* if showLinks == false => we display hamburger icon*/}
                         {showLinks && <FaTimes /> /* if showLinks == true => we display close icon*/}

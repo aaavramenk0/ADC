@@ -11,7 +11,7 @@ const Form = () => {
     const [businessIndustry, setBusinessIndustry] = useState('');
     const [companyName, setCompanyName] = useState('');
     const [sellIndustry, setSellIndustry] = useState('');
-    const [deadline, setDeadline] = useState('');
+    const [deadline, setDeadline] = useState(3);
     const [price, setPrice] = useState('');
 
     const submit = e => { // function for getting users' inputs from the form and pass them to the backend
