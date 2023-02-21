@@ -9,21 +9,20 @@
 }
 .services{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 96px 100px;
-    gap: 24px;
+    justify-content: space-around;
+    gap: 24px;  
+    padding: 0 96px;
 }
 .service {  
-    width: 300px;
-    background: #CED9ED;
-    border-radius: 4px;
+    background: #F7F9FD;
+    overflow-wrap: break-word;
+    border-radius: 8px;
     padding: 24px 16px;
     text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;    
+    max-width: 300px;
+    align-items: center;   
     flex-direction: column;
 }
 .service__heading{
@@ -34,4 +33,5 @@
 .service img {
     width: 62px;
     height: 60px;
+    margin: 24px 0 16px;
 }

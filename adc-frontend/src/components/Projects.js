@@ -7,7 +7,7 @@ import phoneBottom from '../images/HomePage/projects/school-phone-bottom.jpg'
 
 const Projects = () => {
     return (
-        <section id="projects">
+        <section id="projects" className='projects'>
             <h2 className="projects__heading">Our projects</h2>
             <div>
                 {projects.map((project) => {
