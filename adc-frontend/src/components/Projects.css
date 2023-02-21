@@ -11,3 +11,21 @@
     text-transform: uppercase;
     margin-bottom: 30px;
 }
+.project__heading {
+    font-family: 'Commissioner';
+    font-weight: 600;
+    font-size: 28px;
+    text-align: center;
+    color: #080D16;
+}
+.project-photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-phone {
+    padding-bottom: 30px;
+}
+.bottom-phone {
+    padding-top: 30px;
+}

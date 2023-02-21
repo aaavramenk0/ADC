@@ -84,3 +84,6 @@
 .active {
     background: #4267B2;
 }
+.active {
+    cursor: not-allowed;
+}
