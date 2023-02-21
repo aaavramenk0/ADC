@@ -1,7 +1,14 @@
 .projects {
     padding-top: 100px;
-}
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
+.project {
+    padding: 30px 100px;
+}
 .projects__heading {
     text-align: center;
     font-family: 'Commissioner';
@@ -21,11 +28,36 @@
 .project-photos {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .top-phone {
     padding-bottom: 30px;
 }
 .bottom-phone {
     padding-top: 30px;
+}
+.project__description {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-family: 'Commissioner';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #080D16;
+}
+.project__description p span {
+    font-weight: 600;
+}
+.projects-btn {
+    text-decoration: none;
+    color: white;
+    padding: 16px 100px;
+    font-family: 'Commissioner';
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #005697;
+    border-radius: 10px;
 }

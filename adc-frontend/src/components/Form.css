@@ -1,6 +1,6 @@
 .form__section {
     text-align: center;
-    padding: 125px 96px;
+    padding: 100px 96px 25px;
     font-family: 'Commissioner', sans-serif;
 }
 .form__heading {
@@ -70,7 +70,7 @@
 }
 .form-btn {
     background: #898F9C;
-    border-radius: 4px;
+    border-radius: 10px;
     font-family: 'Commissioner';
     font-weight: 600;
     font-size: 16px;

@@ -3,13 +3,13 @@ import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 export const links = [
     {
         id: 1,
-        url: '#process',
-        text: 'process',
+        url: '#about-us',
+        text: 'about us',
     },
     {
         id: 2,
-        url: '#about-us',
-        text: 'about us',
+        url: '#process',
+        text: 'process',
     },
     {
         id: 3,

@@ -13,10 +13,6 @@ export const projects = [
     },
     {
         id: 3,
-        heading: '“HOUSE” residential complex',
+        heading: '“MANNA” restaurant ',
     },
-    {
-        id: 4,
-        heading: '“HOUSE” residential complex',
-    }
 ];
