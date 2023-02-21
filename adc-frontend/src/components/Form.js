@@ -16,7 +16,7 @@ const Form = () => {
 
     const submit = e => { // function for getting users' inputs from the form and pass them to the backend
         e.preventDefault(); // prevent default reloading of the page after submitting form
-        console.log(fullName, email, phone, businessIndustry, companyName, sellIndustry, deadline, price);
+        /* console.log(fullName, email, phone, businessIndustry, companyName, sellIndustry, deadline, price); Ouput the user inputs from the form */
         setFullName(''); setEmail(''); setPhone(''); setBusinessIndustry(''); setCompanyName(''); setSellIndustry(''); setDeadline(''); setPrice(''); // reseting all values after submitting form
         setIsFieldFilled(false); // set the value of the price field to false
     }
