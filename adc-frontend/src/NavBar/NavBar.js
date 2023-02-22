@@ -44,7 +44,7 @@ const Navbar = () => {
                         const { id, url, text } = link; // id = link.id; url = link.url; text = link.text
                         return ( // what the function returns
                         <li key={id}> 
-                            <a href={url}>{text}</a>
+                            <a href={url} onClick={() => setShowLinks(false)}>{text}</a>
                         </li>
                     )})}
                     </ul>

@@ -61,6 +61,7 @@ const HowWeDoIt = () => {
                     <p className='phase-description'>{ process[5].phaseDescription}</p>
                 </div>
             </div>
+            <a href="#apply" className="process-btn">Get a website now</a>
         </section>
     )
 }

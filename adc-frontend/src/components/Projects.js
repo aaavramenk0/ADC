@@ -69,7 +69,7 @@ const Projects = () => {
                     </p>
                 </div>
             </div>
-            <a href="#apply" className="projects-btn">Apply now</a>
+            <a href="#apply" className="projects-btn">Get a website now</a>
         </section>
     )
 }
