@@ -5,7 +5,7 @@ const AboutUs = () => {
     return (
         <section id='about-us' className="about-us">
             <fieldset className="about-us__container">
-                <img src={logo} alt="Logo of Avramenko Development company" />
+                <img src={logo} alt="Logo of Avramenko Development company" className="about-us__logo"/>
                 <div className="about-us__content" >
                     <p>
                         We are a website development <br/> company that helps small and <br/> medium-sized businesses establish <br/> a STRONG ONLINE PRESENCE.
