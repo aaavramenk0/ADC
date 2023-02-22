@@ -8,25 +8,35 @@
     margin-bottom: 30px;
 }
 .services{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 24px;  
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    column-gap: 24px;
     padding: 0 96px;
+}
+.design {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.dev {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.adaptation {
+    grid-area: 1 / 3 / 2 / 4;
+}
+.seo {
+    grid-area: 1 / 4 / 2 / 5;
 }
 .service {  
     background: #F7F9FD;
     overflow-wrap: break-word;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 24px 16px;
     text-align: center;
     display: flex;
-    max-width: 300px;
     align-items: center;   
     flex-direction: column;
 }
 .service__heading{
-    font-size: 24px;
+    font-size: 1.5vw;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -34,4 +44,69 @@
     width: 62px;
     height: 60px;
     margin: 24px 0 16px;
+}
+.service__description {
+    font-family: 'Commissioner';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center; 
+    color: #080D16;
+}
+
+@media (max-width: 1200px) {
+    .services{
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        row-gap: 24px;
+        padding: 0 75px;
+    }
+    .design {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .dev {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .adaptation {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .seo {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .service__heading {
+        font-size: 3vw;
+    }
+}
+@media (max-width: 700px) { 
+    .services{
+        grid-template: repeat(4, 1fr) / 1fr;
+        row-gap: 24px;
+        column-gap: 0;
+        padding: 0 25px;
+    }
+    .design {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .dev {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .adaptation {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .seo {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .service__heading {
+        font-size: 5vw;
+    }
+    .service img {
+        width: 42px;
+        height: 40px;
+        margin: 12px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .services__heading {
+        font-size: 10vw;
+    }
 }

@@ -15,12 +15,12 @@ export const services = [
         id: 3,
         name: "Web adaptation",
         icon: "../images/HomePage/services/web-adaptation-icon.svg",
-        description: "Making a website accessible and usable on different devices"
+        description: "Making a website accessible and usable on different devices and platforms"
     },
     {
         id: 4,
         name: "SEO optimization",
         icon: "../images/HomePage/services/seo-icon.svg",
-        description: "Improving a websites visibility and ranking in search engines like Google"
+        description: "Improving a websites visibility and ranking in search engines like Google, Bing, and others..."
     }
 ]
