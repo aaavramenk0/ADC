@@ -3,12 +3,12 @@ import { projects } from '../data/projects';
 import schoolDesktop from '../images/HomePage/projects/school/school-desktop.jpg'
 import schoolTablet from '../images/HomePage/projects/school/school-tablet.jpg'
 import schoolPhones from '../images/HomePage/projects/school/school-phones.jpg'
-import houseDesktop from '../images/HomePage/projects/house/house-desktop.jpg'
-import houseTablet from '../images/HomePage/projects/house/house-tablet.jpg'
-import housePhones from '../images/HomePage/projects/house/house-phones.jpg'
-import restaurantDesktop from '../images/HomePage/projects/restaurant/restaurant-desktop.jpg'
-import restaurantTablet from '../images/HomePage/projects/restaurant/restaurant-tablet.jpg'
-import restaurantPhones from '../images/HomePage/projects/restaurant/restaurant-phones.jpg'
+import houseDesktop from '../images/HomePage/projects/house/house-desktop.webp'
+import houseTablet from '../images/HomePage/projects/house/house-tablet.webp'
+import housePhones from '../images/HomePage/projects/house/house-phones.webp'
+import restaurantDesktop from '../images/HomePage/projects/restaurant/restaurant-desktop.webp'
+import restaurantTablet from '../images/HomePage/projects/restaurant/restaurant-tablet.webp'
+import restaurantPhones from '../images/HomePage/projects/restaurant/restaurant-phones.webp'
 
 
 const Projects = () => {
