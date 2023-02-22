@@ -2,16 +2,13 @@ import './Projects.css';
 import { projects } from '../data/projects';
 import schoolDesktop from '../images/HomePage/projects/school/school-desktop.jpg'
 import schoolTablet from '../images/HomePage/projects/school/school-tablet.jpg'
-import schoolTopPhone from '../images/HomePage/projects/school/school-phone-top.jpg'
-import schoolBottomPhone from '../images/HomePage/projects/school/school-phone-bottom.jpg'
+import schoolPhones from '../images/HomePage/projects/school/school-phones.jpg'
 import houseDesktop from '../images/HomePage/projects/house/house-desktop.jpg'
 import houseTablet from '../images/HomePage/projects/house/house-tablet.jpg'
-import houseTopPhone from '../images/HomePage/projects/house/house-top-phone.jpg'
-import houseBottomPhone from '../images/HomePage/projects/house/house-bottom-phone.jpg'
+import housePhones from '../images/HomePage/projects/house/house-phones.jpg'
 import restaurantDesktop from '../images/HomePage/projects/restaurant/restaurant-desktop.jpg'
 import restaurantTablet from '../images/HomePage/projects/restaurant/restaurant-tablet.jpg'
-import restaurantTopPhone from '../images/HomePage/projects/restaurant/restaurant-top-phone.jpg'
-import restaurantBottomPhone from '../images/HomePage/projects/restaurant/restaurant-bottom-phone.jpg'
+import restaurantPhones from '../images/HomePage/projects/restaurant/restaurant-phones.jpg'
 
 
 const Projects = () => {
@@ -21,10 +18,9 @@ const Projects = () => {
             <div className='project'>
                 <h3 className='project__heading'>{projects[0].heading}</h3>
                 <div className='project-photos'>
-                    <img src={schoolDesktop} alt={`${projects[0].heading} desktop`} />
-                    <img src={schoolTablet} alt={`${projects[0].heading} tablet`} />
-                    <img src={schoolTopPhone} alt={`${projects[0].heading} phone 1`} className='top-phone' />
-                    <img src={schoolBottomPhone} alt={`${projects[0].heading} phone 2`} className='bottom-phone' />
+                    <img className='desktop' src={schoolDesktop} alt={`${projects[0].heading} desktop`} />
+                    <img src={schoolPhones} alt={`${projects[0].heading} phones`} className='phones' />
+                    <img className='tablet' src={schoolTablet} alt={`${projects[0].heading} tablet`} />
                 </div>
                 <div className='project__description'>
                     <p>
@@ -38,10 +34,9 @@ const Projects = () => {
             <div className='project'>
                 <h3 className='project__heading'>{projects[1].heading}</h3>
                 <div className='project-photos'>
-                    <img src={houseDesktop} alt={`${projects[1].heading} desktop`} />
-                    <img src={houseTablet} alt={`${projects[1].heading} tablet`} />
-                    <img src={houseBottomPhone} alt={`${projects[1].heading} phone 2`} className='bottom-phone' />
-                    <img src={houseTopPhone} alt={`${projects[1].heading} phone 1`} className='top-phone' />
+                    <img className='desktop' src={houseDesktop} alt={`${projects[1].heading} desktop`} />
+                    <img src={housePhones} alt={`${projects[1].heading} phones`} className='phones' />
+                    <img className='tablet' src={houseTablet} alt={`${projects[1].heading} tablet`} />
                 </div>
                 <div className='project__description'>
                     <p>
@@ -55,10 +50,9 @@ const Projects = () => {
             <div className='project'>
                 <h3 className='project__heading'>{projects[2].heading}</h3>
                 <div className='project-photos'>
-                    <img src={restaurantDesktop} alt={`${projects[2].heading} desktop`} />
-                    <img src={restaurantTablet} alt={`${projects[2].heading} tablet`} />
-                    <img src={restaurantTopPhone} alt={`${projects[2].heading} phone 1`} className='top-phone' />
-                    <img src={restaurantBottomPhone} alt={`${projects[2].heading} phone 2`} className='bottom-phone' />
+                    <img className='desktop' src={restaurantDesktop} alt={`${projects[2].heading} desktop`} />
+                    <img src={restaurantPhones} alt={`${projects[2].heading} phones`} className='phones' />
+                    <img className='tablet' src={restaurantTablet} alt={`${projects[2].heading} tablet`} />
                 </div>
                 <div className='project__description'>
                     <p>

@@ -27,13 +27,18 @@
 .project-photos {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 24px;
+    margin: 15px 0;
 }
-.top-phone {
-    padding-bottom: 30px;
+.desktop {
+    max-width: 520px;
 }
-.bottom-phone {
-    padding-top: 30px;
+.tablet {
+    max-width: 350px;
+}
+.phones {
+    max-width: 350px;
 }
 .project__description {
     display: flex;
