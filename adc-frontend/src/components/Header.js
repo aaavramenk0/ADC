@@ -1,17 +1,17 @@
 import './Header.css';
 import headerPhoto from '../images/HomePage/bg.jpg'
-// using of Framer motion library for the animations : https://www.framer.com/motion/
+// use Framer motion library for the animations : https://www.framer.com/motion/
 
 const Header = () => {
     return (
         <header className='header'>
-            <div>
+            <div className="header__content">
                 <h1 className='company-name'> Avramenko <br /> Development <br /> Company </h1>
-                <h2 className='company-slogan'>Build your successful <br/> online presence with us!</h2>
+                <h2 className='company-slogan'>Build your successful online presence with us!</h2>
                 
                 <a href="#apply" className="apply-btn">Apply now</a>    
             </div>
-            <img src={headerPhoto} alt="Hands using laptop with virtual screen" />
+            <img src={headerPhoto} className='header-photo' alt="Hands using laptop with virtual screen" />
         </header>
     )
 }

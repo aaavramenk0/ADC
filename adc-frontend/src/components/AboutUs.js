@@ -5,7 +5,6 @@ const AboutUs = () => {
     return (
         <section id='about-us' className="about-us">
             <fieldset className="about-us__container">
-                {/* <legend>AAA</legend> legend will add border text*/}
                 <img src={logo} alt="Logo of Avramenko Development company" />
                 <div className="about-us__content" >
                     <p>

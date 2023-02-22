@@ -4,12 +4,18 @@
     justify-content: space-between;
     align-items: top; 
     display: flex;
-
+}
+.header__content {
+    padding-bottom: 20px;
+}
+.header-photo {
+    width: 50vw;
 }
 .company-name {
     font-weight: 600;
     color: #080D16;
-    font-size: 72px;
+    font-size: 5vw;
+    /*font-size: ${Math.min(Math.max(14, innerWidth/10), 50)}px; */
     text-transform: uppercase;
     padding-bottom: 25px;
 }
@@ -18,6 +24,7 @@
     font-weight: 500;
     font-size: 32px;
     padding-bottom: 40px;
+    max-width: 350px;
 }
 .apply-btn {
     text-decoration: none;
@@ -30,4 +37,70 @@
     background: #005697;
     margin-bottom: 50px;
     border-radius: 10px;
+}
+@media (max-width: 1300px) {
+    .header {
+        padding: 150px 0 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .company-name {
+        font-size: 4.5vw;
+        padding-bottom: 15px;
+    }
+    .company-slogan {
+        font-size: 24px;
+        padding-bottom: 30px;
+    }
+    .apply-btn {
+        text-decoration: none;
+        color: white;
+        padding: 12px 34px;
+        font-family: 'Commissioner';
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+        background: #005697;
+        margin-bottom: 40px;
+        border-radius: 10px;
+    } 
+    
+}
+
+@media (max-width: 450px) {
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 100px 0 0 16px;
+    }
+    .header__content {
+        padding: 0 16px 20px 0;
+    }
+    .header-photo {
+        width: 288px;
+        height: 200px;
+        margin: 0 auto;
+        border-radius: 8px;
+    }
+    .company-name {
+        font-size: 32px;
+        padding-bottom: 10px;
+    }
+    .company-slogan {
+        font-size: 18px;
+        padding-bottom: 30px;
+    }
+    .apply-btn {
+        text-decoration: none;
+        color: white;
+        padding: 12px 34px;
+        font-family: 'Commissioner';
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+        background: #005697;
+        margin-bottom: 40px;
+        border-radius: 10px;
+    } 
 }

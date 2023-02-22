@@ -29,3 +29,29 @@
 fieldset {
     border: 0px solid #000;
 }
+
+@media (max-width: 1300px) {
+    .about-us__container {
+        padding: 75px 50px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-us {
+        padding: 100px 0px 25px; 
+    }
+    .about-us__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-us__content p {
+        margin-bottom: 25px;
+        width: 100vw;
+        text-align: center;
+    }
+    .about-us__container {
+        padding: 50px 15px;
+    }
+}
