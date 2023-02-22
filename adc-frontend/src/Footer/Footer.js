@@ -8,7 +8,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <footer className='footer'>
+        <footer className='footer' id='contacts'>
             <div > 
                 <Link to="/">
                     <img src={ logo } alt="Logo of ADC" className="footer-logo" />
@@ -17,13 +17,13 @@ const Footer = () => {
             
             <ul className='footer-links'>
                 <li>
-                    Process
+                   <a href="#process">Process</a> 
                 </li>
                 <li>
-                    About Us
+                    <a href="#about-us">About Us</a>
                 </li>
                 <li>
-                    Projects
+                    <a href="#projects">Projects</a>
                 </li>   
             </ul> 
             <div className='social-media__div'>

@@ -8,13 +8,17 @@ footer{
     display: flex;
     flex-direction: column; 
     justify-content: center;
-    gap: 24px;
+    gap: 18px;
 }
-.footer-links li{
+.footer-links li a {
     font-family: 'Commisioner', sans-serif;
+    text-decoration: none;
+    color: #080D16;
     font-weight: 600;
-    font-size: 16px;
-    color: #021100;
+    font-size: 18px;
+}
+.footer-links li a:hover {
+    color: #4267B2;
 }
 .social-media__list {
     display: flex;

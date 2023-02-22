@@ -3,14 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-.ua-heading{
-    padding: 100px 0 50px;
+.error-page-heading{
+    padding: 100px 0;
     font-family: 'Commisioner', sans-serif;
     font-size: 70px;
     text-align: center;
 }
-
-.ua-btn{
+.error-page-btn {
     width: max-content;
     margin: 0 auto;
     padding: 16px 100px;
@@ -22,7 +21,7 @@
     border-radius: 10px;
     margin-bottom: 25px;
 }
-.ua-btn a{
+.error-page-btn a{
     padding: 16px 100px;
     text-decoration: none;
     color: white;

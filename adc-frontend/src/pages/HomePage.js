@@ -5,6 +5,7 @@ import Services from '../components/Services';
 import HowWeDoIt from '../components/HowWeDoIt';
 import Form from '../components/Form';
 import Projects from '../components/Projects';
+import Quote from '../components/Quote';
 
 
 const HomePage = () => {
@@ -15,8 +16,9 @@ const HomePage = () => {
                 <AboutUs />   
                 <Services /> 
                 <HowWeDoIt />  
-                <Form />
+                {/* <Form /> */}
                 <Projects />
+                <Quote />
                 <Form />
             </main>
         </>
