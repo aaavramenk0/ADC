@@ -7,6 +7,8 @@
 }
 .project {
     padding: 30px 100px;
+    display: flex;
+    flex-direction: column;
 }
 .projects__heading {
     text-align: center;
@@ -64,4 +66,10 @@
     text-transform: uppercase;
     background: #005697;
     border-radius: 10px;
+}
+
+@media (max-width: 1280px) {
+    .project-photos {
+        overflow-x: scroll;
+    }
 }

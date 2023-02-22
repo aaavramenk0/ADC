@@ -48,8 +48,12 @@ fieldset {
     }
     .about-us__content p {
         margin-bottom: 25px;
-        width: 100vw;
-        text-align: center;
+        width: 95vw;
+        font-size: 4.5vw;
+        text-align: left;
+    }
+    .about-us__content p:nth-child(even) {
+        text-align: right;
     }
     .about-us__container {
         padding: 50px 15px;
