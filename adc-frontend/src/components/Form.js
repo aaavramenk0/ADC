@@ -1,23 +1,33 @@
 import './Form.css';
 import { useState } from 'react';
 
+const useInput = (initialValue) => {
+    const [value, setValue] = useState(initialValue);
+    return [
+        {
+            value,
+            onChange: (e) => setValue(e.target.value),
+        }, () => setValue(initialValue)
+    ];
+}
+
 const Form = () => {
     const [isFieldFilled, setIsFieldFilled] = useState(false); // useState hook for checking the value in input
 
     // declaring inputs' values using 'useState' hook
-    const [fullName, setFullName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [businessIndustry, setBusinessIndustry] = useState('');
-    const [companyName, setCompanyName] = useState('');
-    const [sellIndustry, setSellIndustry] = useState('');
-    const [deadline, setDeadline] = useState(3);
-    const [price, setPrice] = useState('');
+    const [fullName, resetFullName] = useInput('');
+    const [email, resetEmail] = useInput('');
+    const [phone, resetPhone] = useInput('');
+    const [businessIndustry, resetBusinessIndustry] = useInput('');
+    const [companyName, resetCompanyName] = useInput('');
+    const [sellIndustry, resetSellIndustry] = useInput('');
+    const [deadline, resetDeadline] = useInput(3);
+    const [price, resetPrice] = useInput('');
 
     const submit = e => { // function for getting users' inputs from the form and pass them to the backend
         e.preventDefault(); // prevent default reloading of the page after submitting form
-        console.log(fullName, email, phone, businessIndustry, companyName, sellIndustry, deadline, price); /* Ouput the user inputs from the form */
-        setFullName(''); setEmail(''); setPhone(''); setBusinessIndustry(''); setCompanyName(''); setSellIndustry(''); setDeadline(''); setPrice(''); // reseting all values after submitting form
+        console.log(fullName.value, email.value, phone.value, businessIndustry.value, companyName.value, sellIndustry.value, deadline.value, price.value); /* Ouput the user inputs from the form */
+        resetFullName(); resetEmail(); resetPhone(); resetBusinessIndustry(); resetCompanyName(); resetSellIndustry(); resetDeadline(); resetPrice(); // reseting all values after submitting form
         setIsFieldFilled(false); // set the value of the price field to false
     }
 
@@ -38,8 +48,7 @@ const Form = () => {
                     <label htmlFor="name">Your name *</label>
                     <input
                         type="text"
-                        value={fullName} // value is equal to the ' '
-                        onChange={event => { setFullName(event.target.value) }} // on every change value is equal to entered value by the user
+                        {...fullName}
                         id="name"
                         name="name"
                         placeholder="Jack Snow"
@@ -49,8 +58,7 @@ const Form = () => {
                     <label htmlFor="email">Email *</label>
                     <input
                         type="email"
-                        value={email}
-                        onChange={event => { setEmail(event.target.value) }}
+                        {...email}
                         id="email"
                         name="email"
                         placeholder="example@gmail.com"
@@ -61,8 +69,7 @@ const Form = () => {
                     <label htmlFor="phone">Phone *</label>
                     <input
                         type="tel"
-                        value={phone}
-                        onChange={event => { setPhone(event.target.value) }}
+                        {...phone}
                         id="phone"
                         name="phone"
                         placeholder="+1 770 802 5995"
@@ -100,8 +107,7 @@ const Form = () => {
                     <label htmlFor="bus-industry">Bussiness industry *</label>
                     <input
                         type="text"
-                        value={businessIndustry}
-                        onChange={event => { setBusinessIndustry(event.target.value) }}
+                        {...businessIndustry}
                         id="bus-industry"
                         name="bus-industry"
                         placeholder="Sales, tourism, restaurant, etc."
@@ -112,8 +118,7 @@ const Form = () => {
                     <label htmlFor="company-name">Company name *</label>
                     <input
                         type="text"
-                        value={companyName}
-                        onChange={event => { setCompanyName(event.target.value) }}
+                        {...companyName}
                         id="company-name"
                         name="company-name"
                         placeholder="Avramenko Development Company"
@@ -124,8 +129,7 @@ const Form = () => {
                     <label htmlFor="what-is-selling">What do you sell? *</label>
                     <input
                         type="text"
-                        value={sellIndustry}
-                        onChange={event => { setSellIndustry(event.target.value) }}
+                        {...sellIndustry}
                         id="what-is-selling"
                         name="what-is-selling"
                         placeholder="Name of the products or services"
@@ -138,8 +142,7 @@ const Form = () => {
                         <label>No deadline</label>
                         <input
                             type="range"
-                            value={deadline}
-                            onChange={event => { setDeadline(event.target.value) }}
+                            {...deadline}
                             id="deadline"
                             name="deadline"
                             min="1"
@@ -152,7 +155,7 @@ const Form = () => {
                     <label htmlFor="price">How much are you ready to pay for your website? (in USD) *</label>
                     <input
                         type="number"
-                        value={price}
+                        {...price}
                         id="price"
                         name="price"
                         placeholder="1500"
@@ -160,7 +163,7 @@ const Form = () => {
                         className="form__input"
                         onInput={toggleButton /* on every change inside the input we check the inside value by calling the 'toggleButton' function and using useState hook*/}
                         required
-                        onChange={event => { setPrice(event.target.value) }} />
+                    />
                 </form>
             </div>
 
