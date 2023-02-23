@@ -68,6 +68,13 @@ fieldset {
     }
 }
 
-@media (max-width: 650px) {
-
+@media (max-width: 450px) {
+    .about-us {
+        padding: 55px 0px; 
+    }
+}
+@media (max-width: 380px) {
+    .about-us {
+        padding: 10px 0px; 
+    }
 }
