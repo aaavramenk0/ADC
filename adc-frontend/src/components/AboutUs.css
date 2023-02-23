@@ -49,7 +49,7 @@ fieldset {
     .about-us__content p {
         margin-bottom: 25px;
         width: 95vw;
-        font-size: 4.5vw;
+        font-size: 4vw;
         text-align: left;
     }
     .about-us__content p:nth-child(even) {

@@ -1,6 +1,5 @@
 import './Header.css';
 import headerPhoto from '../images/HomePage/bg.jpg'
-// use Framer motion library for the animations : https://www.framer.com/motion/
 
 const Header = () => {
     return (

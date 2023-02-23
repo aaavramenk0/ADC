@@ -8,7 +8,8 @@ import houseTablet from '../images/HomePage/projects/house/house-tablet.webp'
 import housePhones from '../images/HomePage/projects/house/house-phones.webp'
 import restaurantDesktop from '../images/HomePage/projects/restaurant/restaurant-desktop.webp'
 import restaurantTablet from '../images/HomePage/projects/restaurant/restaurant-tablet.webp'
-import restaurantPhones from '../images/HomePage/projects/restaurant/restaurant-phones.webp'
+import restaurantPhones from '../images/HomePage/projects/restaurant/restaurant-phones.webp';
+
 
 
 const Projects = () => {
