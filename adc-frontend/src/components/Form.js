@@ -34,7 +34,7 @@ const Form = () => {
             <h2 className="form__heading">Want a website for your bussiness?</h2>
             <h3 className="form__subheading">Apply now and get a <span>free</span> brief interview with our experienced designer!</h3>
             <div className="form__cards">
-                <form className="form__card">
+                <form className="form__card first-card">
                     <label htmlFor="name">Your name *</label>
                     <input
                         type="text"
@@ -96,7 +96,7 @@ const Form = () => {
                         
                     </div>
                 </form>    
-                <form className="form__card">
+                <form className="form__card second-card">
                     <label htmlFor="bus-industry">Bussiness industry *</label>
                     <input
                         type="text"
@@ -132,7 +132,7 @@ const Form = () => {
                         className="form__input"
                         required />
                 </form>
-                <form className="form__card">
+                <form className="form__card third-card">
                     <label htmlFor="deadline">How fast would you like to get a ready website? *</label>
                     <div className="deadline">
                         <label>No deadline</label>

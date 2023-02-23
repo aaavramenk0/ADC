@@ -1,6 +1,6 @@
 .form__section {
     text-align: center;
-    padding: 100px 96px 25px;
+    padding: 100px 0 25px 10px;
     font-family: 'Commissioner', sans-serif;
 }
 .form__heading {
@@ -22,10 +22,11 @@
 }
 
 .form__cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: first baseline;
-    margin-bottom: 60px;
+    display: grid;
+    width: 95vw;
+    margin: 0 auto;
+    grid-template:  1fr / repeat(3, 1fr);
+    margin-bottom: 40px;
 }
 .form__card {
     display: flex;
@@ -37,8 +38,7 @@
     font-weight: 500;
     font-size: 18px;
     padding: 24px;
-    width: 400px;
-    height: 356px;
+    max-width: 30vw;
 }
 .form__input {
     padding: 10px;
@@ -84,4 +84,47 @@
 }
 .active {
     cursor: not-allowed;
+}
+
+@media (max-width: 1270px) {
+    .form__cards {
+        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+        gap: 24px 0;
+    }
+    .first-card {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    .second-card {
+        grid-area: 1 / 3 / 2 / 5;
+    }
+    .third-card {
+        grid-area: 2 / 2 / 3 / 4;
+    }
+    .form__card {
+        max-width: 45vw;
+    }
+}
+@media (max-width: 600px) {
+    .form__cards {
+        grid-template: repeat(3, 1fr) / 1fr;
+        gap: 24px 0;
+
+    }
+    .first-card {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .second-card {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .third-card {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .form__card {
+        max-width: 95vw;
+    }
+}
+@media (max-width: 350px) {
+    .form-btn {
+        padding: 16px 40px;
+    }
 }
