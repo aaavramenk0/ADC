@@ -11,7 +11,6 @@ const useInput = (initialValue) => {
         }, () => setValue(initialValue)
     ];
 }
-
 const Form = () => {
     const form = useRef();
     const [isFieldFilled, setIsFieldFilled] = useState(false); // useState hook for checking the value in input
@@ -38,6 +37,8 @@ const Form = () => {
           console.log(error.text);
         });
     }
+
+    
 
     const toggleButton = (event) => { // function to get the event(input) from calling the function
         if (event.target.value.trim().length > 0) { // then if value inside the input is more then 0 ('trim' is to get rid of spaces after the text and before)
