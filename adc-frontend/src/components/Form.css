@@ -85,6 +85,20 @@
 .active {
     cursor: not-allowed;
 }
+.submit_message {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 18px;
+    display: none;
+}
+.success_message {
+    color: green;
+    display: block;
+}
+.error_message {
+    color: red;
+    display: block;
+}
 
 @media (max-width: 1270px) {
     .form__cards {
@@ -126,5 +140,8 @@
 @media (max-width: 350px) {
     .form-btn {
         padding: 16px 40px;
+    }
+    .submit_message {
+        font-size: 14px;
     }
 }

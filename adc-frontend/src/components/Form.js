@@ -1,5 +1,5 @@
 import './Form.css';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 const useInput = (initialValue) => {
@@ -14,6 +14,8 @@ const useInput = (initialValue) => {
 const Form = () => {
     const form = useRef();
     const [isFieldFilled, setIsFieldFilled] = useState(false); // useState hook for checking the value in input
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [isError, setIsError] = useState(false);
 
     // declaring inputs' values using 'useState' hook
     const [fullName, resetFullName] = useInput('');
@@ -24,20 +26,26 @@ const Form = () => {
     const [sellIndustry, resetSellIndustry] = useInput('');
     const [deadline, resetDeadline] = useInput(3);
     const [price, resetPrice] = useInput('');
-
+    
     const submit = e => { // function for getting users' inputs from the form and pass them to the backend
         e.preventDefault(); // prevent default reloading of the page after submitting form
         /* console.log(fullName.value, email.value, phone.value, businessIndustry.value, companyName.value, sellIndustry.value, deadline.value, price.value); /* Ouput the user inputs from the form */
         resetFullName(); resetEmail(); resetPhone(); resetBusinessIndustry(); resetCompanyName(); resetSellIndustry(); resetDeadline(); resetPrice(); // reseting all values after submitting form
         setIsFieldFilled(false); // set the value of the price field to false
+        document.getElementById('submit-date').value = new Date().toLocaleString();
         emailjs.sendForm('service_gjibnjc', 'template_v5hw2ym', form.current, 'c3wYcruUL-Jeg_u2d')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-          console.log(error.text);
+        .then((result) => { // when from is successfully submitted
+            setIsSuccess(true);
+        }, (error) => { // when the form is not successfully submitted
+            setIsError(true);
         });
     }
-
+    useEffect(() => { // do this everytime, when isError or isSuccess change 
+        setTimeout(() => { // in 3000ms = 3s
+            setIsSuccess(false); // change isSuccess to false
+            setIsError(false); // change isError to false
+        }, 3000)
+    }, [isError, isSuccess])
     
 
     const toggleButton = (event) => { // function to get the event(input) from calling the function
@@ -176,9 +184,12 @@ const Form = () => {
                         required
                     />
                 </div>
+                <input type="hidden" name='submit-date' id='submit-date'/>
             </form>
 
-            <a href="#apply" onClick={isFieldFilled ? submit : undefined} className='form-btn' style={isFieldFilled ? {'background' : '#4267B2'} : {'cursor' : 'not-allowed'} /*  depending on the value of variable 'isFieldFilled' we dynamically define the styles for the button }*/ }  >Apply now</a>
+            <a href="#apply" onClick={isFieldFilled ? submit : undefined} className='form-btn' style={isFieldFilled ? { 'background': '#4267B2' } : { 'cursor': 'not-allowed' } /*  depending on the value of variable 'isFieldFilled' we dynamically define the styles for the button }*/}  >Apply now</a>
+            <p className={`submit_message ${isSuccess ? ' success_message' : '' /* if isSuccess is true we add success_message style to the text*/}`}>Form was submitted successfully!</p>
+            <p className={`submit_message ${isError ? ' error_message' : ''/* if isError is true we add error_message style to the text*/}`}>Form was not submitted. Please, try again later!</p>
         </section>
     )
 }
