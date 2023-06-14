@@ -75,14 +75,19 @@
     font-weight: 600;
     font-size: 16px;
     padding: 16px 100px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
     color: #F5F5F5;
-    text-decoration: none;
+    outline: none;
+    border: 0px;
     text-transform: uppercase;
 }
 .active {
-    background: #4267B2;
+    background: #4267b2;
+    cursor: pointer;
 }
-.active {
+.not-active {
     cursor: not-allowed;
 }
 .submit_message {

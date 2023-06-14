@@ -33,7 +33,7 @@ const Footer = () => {
                         <Link to='https://www.facebook.com/profile.php?id=100012455267566' target='_blank'><img src={fbIcon} alt="" /></Link>
                     </li>
                     <li> 
-                        <Link to="https://www.instagram.com/_aaavramenko_/" target="_blank"><img src={instIcon} alt="" /></Link>
+                        <Link to="https://www.instagram.com/avramenko_development/" target="_blank"><img src={instIcon} alt="" /></Link>
                     </li>
                     <li>
                         <Link to='https://www.linkedin.com/in/oleksandr-avramenko/' target="_blank"><img src={linkedinIcon} alt="" /></Link>

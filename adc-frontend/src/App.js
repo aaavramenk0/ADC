@@ -5,6 +5,9 @@ import UAPage from './pages/uaPage';
 import HomePage from './pages/HomePage';
 import ErrorPage from './pages/ErrorPage';
 import Footer from './Footer/Footer';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -16,6 +19,10 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/ua' element={<UAPage/>} />
             <Route path="*" element={<ErrorPage />} />
+            
+            <Route path='/login' element={Login} />
+            <Route path='/register' element={Register} />
+            <Route path='/dashboard' element={Dashboard} />
           </Routes>
         </div>
         <Footer />

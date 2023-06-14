@@ -50,11 +50,11 @@ fieldset {
         margin-bottom: 25px;
         width: 95vw;
         font-size: 4vw;
-        text-align: left;
+        text-align: center;
     }
-    .about-us__content p:nth-child(even) {
+    /* .about-us__content p:nth-child(even) {
         text-align: right;
-    }
+    } */
     .about-us__container {
         padding: 50px 15px;
     }

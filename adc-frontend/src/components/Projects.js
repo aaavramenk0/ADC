@@ -13,7 +13,8 @@ import restaurantPhones from '../images/HomePage/projects/restaurant/restaurant-
 
 
 const Projects = () => {
-    return (
+    return (    
+        <div>
         <section id="projects" className='projects'>
             <h2 className="projects__heading">Our projects</h2>
             <div className="projects__div">
@@ -68,6 +69,7 @@ const Projects = () => {
             </div>
             <a href="#apply" className="projects-btn">Get a website now</a>
         </section>
+        </div>
     )
 }
 
