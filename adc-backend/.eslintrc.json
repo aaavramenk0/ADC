@@ -1,0 +1,29 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "standard",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        // 4 spaces for the TAB
+        "indent": ["error", 4],
+
+        // allows trailing whitespace on empty lines
+        "skipBlankLines": true,
+        // allows trailing whitespace in comment blocks
+        "ignoreComments": true,
+        
+        // requires the use of double quotes wherever possible 
+        "quotes": ["error", "double"]
+    }
+}

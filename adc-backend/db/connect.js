@@ -1,31 +1,31 @@
-import dotenv from "dotenv"; 
-import { MongoClient } from "mongodb";
+import dotenv from 'dotenv'
+import { MongoClient } from 'mongodb'
 
-dotenv.config();
+dotenv.config()
 
-let _db;
+let _db
 
-/* Function the initialize new database using connection string to Mongo database from .env file  */ 
+/* Function the initialize new database using connection string to Mongo database from .env file  */
 const initDb = callback => {
     if (_db) {
-        console.log("DB is already initialized!");
-        return callback(null, _db);
+        console.log('DB is already initialized!')
+        return callback(null, _db)
     }
     MongoClient.connect(process.env.MONGODB_URI)
-        .then( async (client) => {
-            _db = client;
-            callback(null, _db);
+        .then(async (client) => {
+            _db = client
+            callback(null, _db)
         })
         .catch((err) => {
-            callback(err);
+            callback(err)
         })
 }
 
 const getDb = () => {
     if (!_db) {
-        throw Error("Db is not initialized");
+        throw Error('Db is not initialized')
     }
-    return _db;
+    return _db
 }
 
-export { initDb, getDb };
+export { initDb, getDb }
