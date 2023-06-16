@@ -6,8 +6,7 @@ import HomePage from './pages/HomePage';
 import ErrorPage from './pages/ErrorPage';
 import Footer from './Footer/Footer';
 import Login from './pages/Login';
-import Register from './pages/Register';
-import Dashboard from './pages/Dashboard';
+import Signup from './pages/Signup';
 
 function App() {
   return (
@@ -20,9 +19,8 @@ function App() {
             <Route path='/ua' element={<UAPage/>} />
             <Route path="*" element={<ErrorPage />} />
             
-            <Route path='/login' element={Login} />
-            <Route path='/register' element={Register} />
-            <Route path='/dashboard' element={Dashboard} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
           </Routes>
         </div>
         <Footer />

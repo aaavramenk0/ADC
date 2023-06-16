@@ -40,13 +40,13 @@ const Navbar = () => {
                 </div>
                 <div className='links-container' ref={linksContainerRef}>
                     <ul className='links' ref={linksRef}>
-                    {links.map((link) => { // mapping through the list of links inside the data.js
-                        const { id, url, text } = link; // id = link.id; url = link.url; text = link.text
-                        return ( // what the function returns
-                        <li key={id}> 
-                            <a href={url} onClick={() => setShowLinks(false)}>{text}</a>
-                        </li>
-                    )})}
+                        {links.map((link) => { // mapping through the list of links inside the data.js
+                            const { id, url, text } = link; // id = link.id; url = link.url; text = link.text
+                            return ( // what the function returns
+                            <li key={id}> 
+                                <a href={url} onClick={() => setShowLinks(false)}>{text}</a>
+                            </li>
+                        )})}
                     </ul>
                 </div>
                 <ul className='social-icons'>
@@ -60,11 +60,13 @@ const Navbar = () => {
                     })}
                 </ul>
                 {/* Add dynamic styles depending on the website language */}
-                <ul className='languages'>
+                {/* <ul className='languages'>
                     <Link to='/ua' onClick={isUA => setIsUA(true)}><li className={`${isUA ? 'active-lang' : 'lang'}`}>UA</li></Link> 
                     <li style={{color: '#898F9C'}}>|</li>
                     <Link to='/' onClick={isUA => setIsUA(false)}><li className={`${!isUA ? 'active-lang' : 'lang'}`}>EN</li></Link>
-                </ul>
+                </ul> */}
+                <Link to='/login'>Login</Link>
+                <Link to='/signup'>Signup</Link>
             </div>
         </nav>
     );
