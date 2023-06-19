@@ -79,6 +79,15 @@ nav * {
   color: #4267b2;
   font-weight: 600;
 }
+.logout-button-div button {
+  background: #fff;
+  color: #4267B2;
+  border: 2px solid #4267B2;
+  padding: 5px 30px;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
 @media screen and (min-width: 1050px) {
   .nav-center {
     max-width: 1440px;

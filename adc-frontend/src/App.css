@@ -8,3 +8,6 @@
     background: #5c80c7;
 }
 
+button:hover {
+    cursor: pointer;
+}

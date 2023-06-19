@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/NavBar/logo.svg';
 import './NavBar.css';
+import { useLogout } from '../hooks/useLogout';
 
 const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false); // state for show/hide links depends on screen width
@@ -27,6 +28,11 @@ const Navbar = () => {
             linksContainerRef.current.style.height = '0px';
         }
     }, [showLinks]); // this effect only works if showLinks state is updated
+    
+    const { logout } = useLogout();
+    const handleClick = () => {
+        logout();
+    }
 
     return ( // what is component returns
         <nav>
@@ -65,8 +71,14 @@ const Navbar = () => {
                     <li style={{color: '#898F9C'}}>|</li>
                     <Link to='/' onClick={isUA => setIsUA(false)}><li className={`${!isUA ? 'active-lang' : 'lang'}`}>EN</li></Link>
                 </ul>
-                <Link to='/login'>Login</Link>
-                <Link to='/signup'>Signup</Link>
+                <div className='logout-button-div'>
+                    <button onClick={handleClick}>Log out</button>
+                </div>
+                <div>
+                    <Link to='/login'>Login</Link>
+                    <Link to='/signup'>Signup</Link>  
+                </div>
+                
             </div>
         </nav>
     );

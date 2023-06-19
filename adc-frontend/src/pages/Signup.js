@@ -18,7 +18,7 @@ const Signup = () => {
         <>
             <form className='signup' onSubmit={handleSubmit}>
                 <h3>Sign up</h3>
-                
+                {error && <div className='error'>{error}</div>}
                 <div className='form-wrapper'>
                     <div className='email-field-div'>
                         <label>Email</label>
@@ -42,7 +42,7 @@ const Signup = () => {
 
                     <button disabled={isLoading}>Sign up</button>    
                 </div>
-                {error && <div className='error'>{error}</div>}
+                
             </form>
         </>
     );
