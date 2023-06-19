@@ -1,7 +1,7 @@
 form.signup {
     max-width: 400px;
     margin: 40px auto;
-    padding-top: 100px;
+    padding: 100px 10px 10px 10px;
     background: #fff;
 }
 
@@ -61,4 +61,10 @@ form.signup .error {
     border-radius: 15px;
     text-align: center;
     margin: 20px 0;
+}
+
+@media screen and (max-width : 350px) {
+    form.signup {
+        text-align: center;
+    }
 }

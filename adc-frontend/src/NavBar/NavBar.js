@@ -58,7 +58,7 @@ const Navbar = () => {
                         )})}
                     </ul>
                 </div>
-                <ul className='social-icons'>
+                {/*<ul className='social-icons'>
                     {social.map((socialIcon) => { // mapping through the list of social inside the data.js
                         const { id, url, icon } = socialIcon; // id = socialIcon.id; url = socialIcon.url; icon = socialIcon.icon
                         return ( // what the function returns
@@ -67,13 +67,13 @@ const Navbar = () => {
                             </li>
                         );
                     })}
-                </ul>
-                {/* Add dynamic styles depending on the website language */}
+                </ul> */}
+                {/* Add dynamic styles depending on the website language 
                 <ul className='languages'>
                     <Link to='/ua' onClick={isUA => setIsUA(true)}><li className={`${isUA ? 'active-lang' : 'lang'}`}>UA</li></Link> 
                     <li style={{color: '#898F9C'}}>|</li>
                     <Link to='/' onClick={isUA => setIsUA(false)}><li className={`${!isUA ? 'active-lang' : 'lang'}`}>EN</li></Link>
-                </ul>
+                </ul>*/}
                 {user && (
                     <div className='logout-button-div'>
                         <span>{user.email}</span>

@@ -87,6 +87,25 @@ nav * {
   border-radius: 4px;
   font-size: 18px;
 }
+/*.auth-div {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 40px;
+}
+.auth-div a{
+  color: #080D16;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+.auth-div a:hover {
+  font-weight: 600;
+  font-size: 20px;
+  color: #4267B2;
+}*/
 
 @media screen and (min-width: 1050px) {
   .nav-center {
