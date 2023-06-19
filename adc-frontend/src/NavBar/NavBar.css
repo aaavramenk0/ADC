@@ -61,6 +61,7 @@ nav * {
 .social-icons {
   display: none;
 }
+ 
 .links-container {
   height: 0;
   overflow: hidden;
@@ -79,6 +80,11 @@ nav * {
   color: #4267b2;
   font-weight: 600;
 }
+.logout-button-div {
+  display: flex;
+  gap: 10px;  
+  align-items: center;
+}
 .logout-button-div button {
   background: #fff;
   color: #4267B2;
@@ -87,11 +93,9 @@ nav * {
   border-radius: 4px;
   font-size: 18px;
 }
-/*.auth-div {
+.auth-div {
   display: flex;
-  justify-content: center;
-  align-items: center; 
-  gap: 40px;
+  gap: 15px;
 }
 .auth-div a{
   color: #080D16;
@@ -105,7 +109,10 @@ nav * {
   font-weight: 600;
   font-size: 20px;
   color: #4267B2;
-}*/
+}
+.auth-div, .logout-button-div {
+  display: none;
+}
 
 @media screen and (min-width: 1050px) {
   .nav-center {
@@ -115,13 +122,13 @@ nav * {
     align-items: center;
     justify-content: space-between;
   }
-  .nav-toggle {
+  .nav-toggle{
     display: none;
   }
   .links-container {
     height: auto !important;
   }
-  .links {
+  .links, .auth-div, .logout-button-div  {
     display: flex;
   }
   .links a {

@@ -31,6 +31,9 @@ export const useLogin = () => {
                         
             // update loading state
             setIsLoading(false);
+
+            // redirect user to the homepage
+            window.location.href = '/'
         }
     }
 

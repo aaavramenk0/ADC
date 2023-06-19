@@ -31,6 +31,9 @@ export const useSignup = () => {
                         
             // update loading state
             setIsLoading(false);
+
+            // redirect user to the homepage
+            window.location.href = '/'
         }
     }
 

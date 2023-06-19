@@ -9,6 +9,9 @@ export const useLogout = () => {
 
         // dispatch logout action 
         dispatch({ type: 'LOGOUT' })
+
+        // redirect user to the homepage
+        window.location.href = '/'
     }
 
     return {logout}

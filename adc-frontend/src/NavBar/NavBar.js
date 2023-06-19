@@ -57,6 +57,7 @@ const Navbar = () => {
                             </li>
                         )})}
                     </ul>
+                    
                 </div>
                 {/*<ul className='social-icons'>
                     {social.map((socialIcon) => { // mapping through the list of social inside the data.js
@@ -81,7 +82,7 @@ const Navbar = () => {
                     </div>
                 )}
                 {!user && (
-                    <div>
+                    <div className='auth-div'>
                         <Link to='/login'>Login</Link>
                         <Link to='/signup'>Signup</Link>
                     </div>
