@@ -32,7 +32,7 @@ const Navbar = () => {
         <nav>
             <div className='nav-center'>
                 <div className='nav-header'>
-                    <a href="#top"><img src={logo} className='logo' alt='logo' /></a>
+                    <a href="/"><img src={logo} className='logo' alt='logo' /></a>
                     <button className='nav-toggle' onClick={toggleLinks}>
                         {!showLinks && <FaBars /> /* if showLinks == false => we display hamburger icon*/}
                         {showLinks && <FaTimes /> /* if showLinks == true => we display close icon*/}
@@ -60,11 +60,11 @@ const Navbar = () => {
                     })}
                 </ul>
                 {/* Add dynamic styles depending on the website language */}
-                {/* <ul className='languages'>
+                <ul className='languages'>
                     <Link to='/ua' onClick={isUA => setIsUA(true)}><li className={`${isUA ? 'active-lang' : 'lang'}`}>UA</li></Link> 
                     <li style={{color: '#898F9C'}}>|</li>
                     <Link to='/' onClick={isUA => setIsUA(false)}><li className={`${!isUA ? 'active-lang' : 'lang'}`}>EN</li></Link>
-                </ul> */}
+                </ul>
                 <Link to='/login'>Login</Link>
                 <Link to='/signup'>Signup</Link>
             </div>
