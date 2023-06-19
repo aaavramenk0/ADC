@@ -1,21 +1,25 @@
 import { useState } from 'react';
+import { useLogin } from '../hooks/useLogin';
 import './Login.css'
 
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const { login, isLoading, error } = useLogin();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        console.log(email, password)
+        await login(email, password)
     }
     
     return (
         <>
             <form className='login' onSubmit={handleSubmit}>
                 <h3>Log in</h3>
+
+                {error && <div className='error'>{error}</div>}
 
                 <div className='form-wrapper'>
                     <div className='email-field-div'>
@@ -40,7 +44,7 @@ const Login = () => {
         
                     
 
-                    <button>Log in</button>
+                    <button disabled={isLoading}>Log in</button>
                 </div>
                 
             </form>

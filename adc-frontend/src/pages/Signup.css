@@ -62,7 +62,3 @@ form.signup .error {
     text-align: center;
     margin: 20px 0;
 }
-
-input.error {
-    border: 1px solid #e7195a;
-}

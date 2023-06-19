@@ -31,7 +31,7 @@ export const social = [
     },
     {
         id: 2,
-        url: 'https://www.instagram.com/_aaavramenko_/',
+        url: 'https://www.instagram.com/avramenko_development/',
         icon: <FaInstagram />,
     },
     {

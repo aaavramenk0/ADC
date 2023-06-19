@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/NavBar/logo.svg';
 import './NavBar.css';
 import { useLogout } from '../hooks/useLogout';
+import { useAuthContext } from '../hooks/useAuthContext';
 
 const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false); // state for show/hide links depends on screen width
@@ -30,6 +31,8 @@ const Navbar = () => {
     }, [showLinks]); // this effect only works if showLinks state is updated
     
     const { logout } = useLogout();
+    const { user } = useAuthContext();
+
     const handleClick = () => {
         logout();
     }
@@ -71,14 +74,18 @@ const Navbar = () => {
                     <li style={{color: '#898F9C'}}>|</li>
                     <Link to='/' onClick={isUA => setIsUA(false)}><li className={`${!isUA ? 'active-lang' : 'lang'}`}>EN</li></Link>
                 </ul>
-                <div className='logout-button-div'>
-                    <button onClick={handleClick}>Log out</button>
-                </div>
-                <div>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/signup'>Signup</Link>  
-                </div>
-                
+                {user && (
+                    <div className='logout-button-div'>
+                        <span>{user.email}</span>
+                        <button onClick={handleClick}>Log out</button>
+                    </div>
+                )}
+                {!user && (
+                    <div>
+                        <Link to='/login'>Login</Link>
+                        <Link to='/signup'>Signup</Link>
+                    </div>
+                )}
             </div>
         </nav>
     );
