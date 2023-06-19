@@ -1,3 +1,53 @@
-.signup {
+form.signup {
+    max-width: 400px;
+    margin: 40px auto;
     padding-top: 100px;
+    background: #fff;
+}
+
+form.signup h3 {
+    text-align: center;
+    font-size: 44px;
+    margin-bottom: 25px;
+}
+
+form.signup label {
+    display: inline-block;
+    width: 110px;
+    font-size: 18px;
+}
+
+form.signup input {
+    font-size: 15px;
+    padding: 10px;
+}
+
+form.signup .form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    flex-direction: column;
+}
+
+form.signup .form-wrapper .email-field-div, form.signup .form-wrapper .password-field-div {
+    margin-bottom: 10px;
+}
+
+form.signup .form-wrapper .password-rule {
+    font-size: 12px;
+    font-style: italic;
+}
+
+form.signup button {
+    text-decoration: none;
+    color: white;
+    padding: 16px 100px;
+    font-family: 'Commissioner';
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #005697;
+    margin: 25px 0;
+    border-radius: 10px;
+    border: 0;
 }

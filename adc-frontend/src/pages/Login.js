@@ -17,20 +17,32 @@ const Login = () => {
             <form className='login' onSubmit={handleSubmit}>
                 <h3>Log in</h3>
 
-                <label>Email: </label>
-                <input
-                    type="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                />
-                <label>Password: </label>
-                <input
-                    type="password"
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
-                />
+                <div className='form-wrapper'>
+                    <div className='email-field-div'>
+                       <label>Email </label>
+                        <input
+                            type="email"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                        /> 
+                    </div>
+                    
+                    <div className='password-field-div'>
+                        <label className='password-label'>Password</label>
+                        
+                        <input
+                            type="password"
+                            onChange={(e) => setPassword(e.target.value)}
+                            value={password}
+                        />
+                        
+                    </div>
+        
+                    
 
-                <button>Log in</button>
+                    <button>Log in</button>
+                </div>
+                
             </form>
         </>
     );
