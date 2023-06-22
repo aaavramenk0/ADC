@@ -32,13 +32,7 @@ const Form = () => {
         resetFullName(); resetEmail(); resetPhone(); resetBusinessIndustry(); resetCompanyName(); resetSellIndustry(); resetDeadline(); resetPrice(); // reseting all values after submitting form
         
         setIsFieldFilled(false); // set the value of the price field to false
-<<<<<<< HEAD
-        
         document.getElementById('submit-date').value = new Date().toLocaleString();
-        
-        /* handling form using EmailJS library */
-=======
->>>>>>> parent of 7d63466 (Adding message onSubmit to the form)
         emailjs.sendForm('service_gjibnjc', 'template_v5hw2ym', form.current, 'c3wYcruUL-Jeg_u2d')
         .then((result) => {
             console.log(result.text);
@@ -46,16 +40,12 @@ const Form = () => {
           console.log(error.text);
         });
     }
-
-<<<<<<< HEAD
     useEffect(() => { // do this everytime, when isError or isSuccess change 
         setTimeout(() => { // in 3000ms = 3s
             setIsSuccess(false); // change isSuccess to false
             setIsError(false); // change isError to false
         }, 3000)
     }, [isError, isSuccess])
-=======
->>>>>>> parent of 7d63466 (Adding message onSubmit to the form)
     
     const toggleButton = (event) => { // function to get the event(input) from calling the function
         if (event.target.value.trim().length > 0) { // then if value inside the input is more then 0 ('trim' is to get rid of spaces after the text and before)
@@ -195,21 +185,13 @@ const Form = () => {
                         onInput={toggleButton /* on every change inside the input we check the inside value by calling the 'toggleButton' function and using useState hook*/}
                         required
                     />
-<<<<<<< HEAD
-                    </div>
-                    </div>
-                <input type="hidden" name='submit-date' id='submit-date'/>
-                <p className={`submit_message ${isError ? ' error_message' : ''/* if isError is true we add error_message style to the text*/}`}>Form was not submitted. Please, try again later!</p>
-                <p className={`submit_message ${isSuccess ? ' success_message' : '' /* if isSuccess is true we add success_message style to the text*/}`}>Form was submitted successfully!</p>
-                <button /* onClick={isFieldFilled ? submit : undefined} */ className={`form-btn ${isFieldFilled ? ' active' : 'not-active'}` /* depending on the value of variable 'isFieldFilled' we dynamically define the styles for the button */}>Apply now</button>
-            </form>
-
-=======
                 </div>
+                <input type="hidden" name='submit-date' id='submit-date'/>
             </form>
 
-            <a href="#apply" onClick={isFieldFilled ? submit : undefined} className='form-btn' style={isFieldFilled ? {'background' : '#4267B2'} : {'cursor' : 'not-allowed'} /*  depending on the value of variable 'isFieldFilled' we dynamically define the styles for the button }*/ }  >Apply now</a>
->>>>>>> parent of 7d63466 (Adding message onSubmit to the form)
+            <a href="#apply" onClick={isFieldFilled ? submit : undefined} className='form-btn' style={isFieldFilled ? { 'background': '#4267B2' } : { 'cursor': 'not-allowed' } /*  depending on the value of variable 'isFieldFilled' we dynamically define the styles for the button }*/}  >Apply now</a>
+            <p className={`submit_message ${isSuccess ? ' success_message' : '' /* if isSuccess is true we add success_message style to the text*/}`}>Form was submitted successfully!</p>
+            <p className={`submit_message ${isError ? ' error_message' : ''/* if isError is true we add error_message style to the text*/}`}>Form was not submitted. Please, try again later!</p>
         </section>
     )
 }
