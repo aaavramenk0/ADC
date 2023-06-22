@@ -1,8 +1,9 @@
 import './Form.css';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 const useInput = (initialValue) => {
+  
     const [value, setValue] = useState(initialValue);
     return [
         {
@@ -15,9 +16,11 @@ const useInput = (initialValue) => {
 const Form = () => {
     const form = useRef();
     const [isFieldFilled, setIsFieldFilled] = useState(false); // useState hook for checking the value in input
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [isError, setIsError] = useState(false);
 
     // declaring inputs' values using 'useState' hook
-    const [fullName, resetFullName] = useInput('');
+    const [fullName, resetFullName] = useInput('');  
     const [email, resetEmail] = useInput('');
     const [phone, resetPhone] = useInput('');
     const [businessIndustry, resetBusinessIndustry] = useInput('');
@@ -25,19 +28,18 @@ const Form = () => {
     const [sellIndustry, resetSellIndustry] = useInput('');
     const [deadline, resetDeadline] = useInput(3);
     const [price, resetPrice] = useInput('');
-
+    
     const submit = e => { // function for getting users' inputs from the form and pass them to the backend
         e.preventDefault(); // prevent default reloading of the page after submitting form
-
+        /* console.log(fullName.value, email.value, phone.value, businessIndustry.value, companyName.value, sellIndustry.value, deadline.value, price.value); /* Ouput the user inputs from the form */
         resetFullName(); resetEmail(); resetPhone(); resetBusinessIndustry(); resetCompanyName(); resetSellIndustry(); resetDeadline(); resetPrice(); // reseting all values after submitting form
-        
         setIsFieldFilled(false); // set the value of the price field to false
         document.getElementById('submit-date').value = new Date().toLocaleString();
         emailjs.sendForm('service_gjibnjc', 'template_v5hw2ym', form.current, 'c3wYcruUL-Jeg_u2d')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-          console.log(error.text);
+        .then((result) => { // when from is successfully submitted
+            setIsSuccess(true);
+        }, (error) => { // when the form is not successfully submitted
+            setIsError(true);
         });
     }
     useEffect(() => { // do this everytime, when isError or isSuccess change 
@@ -46,23 +48,21 @@ const Form = () => {
             setIsError(false); // change isError to false
         }, 3000)
     }, [isError, isSuccess])
-    
-    const toggleButton = (event) => { // function to get the event(input) from calling the function
+
+
+    const toggleButton = (event) => { // function to get the event(input) from calling the function  
         if (event.target.value.trim().length > 0) { // then if value inside the input is more then 0 ('trim' is to get rid of spaces after the text and before)
             setIsFieldFilled(true); // we set the value of 'isFieldFilled' to 'true'
         } else { // or if the value inside the input is less or equal to 0
             setIsFieldFilled(false); // we set the value of 'isFieldFilled' to 'false'
-        }   
+        }
     }
-
     
-
     return (
         <section className="form__section" id="apply">
             <h2 className="form__heading">Want a website for your bussiness?</h2>
             <h3 className="form__subheading">Apply now and get a <span>free</span> brief interview with our experienced designer!</h3>
-            <form ref={form} onSubmit={submit}>
-                <div className="form__cards">
+            <form className="form__cards" ref={form} onSubmit={submit}>
                 <div className="form__card first-card" >
                     <label htmlFor="name">Your name *</label>
                     <input
@@ -95,7 +95,7 @@ const Form = () => {
                         className="form__input"
                         required
                     />
-                    <label className="checkboxes__label">Ways to comunicate:</label>
+                    <label className="checkboxes__label">Ways to comunicate: *</label>
                     <div id="checkboxes" className="form__checkboxes">
                         <div className="form__checkbox">
                             <input
@@ -109,16 +109,14 @@ const Form = () => {
                             <input
                                 type="checkbox"
                                 id="email__checkbox"
-                                name="email__checkbox"
-                            />
+                                name="email__checkbox" />
                             <label htmlFor="email__checkbox">Email</label>
                         </div>
                         <div className="form__checkbox">
                             <input
                                 type="checkbox"
                                 id="messenger__checkbox"
-                                name="messenger__checkbox"
-                            />
+                                name="messenger__checkbox" />
                             <label htmlFor="messenger__checkbox">Messenger</label> 
                         </div>
                         
@@ -195,5 +193,6 @@ const Form = () => {
         </section>
     )
 }
-
+  
+  
 export default Form;

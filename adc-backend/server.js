@@ -6,15 +6,22 @@
 */
 import express from "express";
 import mongoose from "mongoose";
+import path from "path";
 import dotenv from "dotenv";
 import { router as userRoutes } from './routes/user.js';
 
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
+
 const PORT = process.env.PORT || 8000;
 dotenv.config();
 
 // middleware
 app.use(express.json());
+app.use(express.static(path.join(__dirname, './build')));
 
 app.use((req, res, next) => {
     console.log(req.path, req.method);
@@ -33,6 +40,11 @@ app.use('/api/user', userRoutes);
     - If the connection is successful, the application starts listening for incoming requests on the specified PORT, and a success message is logged to the console.
     - If an error occurs during the database connection, the error is caught and logged to the console.
 */
+
+app.get(/^(?!\/api).+/, (req, res) => {
+  res.sendFile(path.join(__dirname, './build/index.html'))
+})
+
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     // listen for requests
